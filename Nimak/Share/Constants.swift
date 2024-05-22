@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let randomImage = "https://cdn.dummyjson.com/recipe-images/11.webp"
+}

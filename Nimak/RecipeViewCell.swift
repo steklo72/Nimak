@@ -6,10 +6,50 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+import SDWebImage
+import SDWebImageSwiftUI
+
+
+
+
+final class RecipeViewModel: ObservableObject {
+    @Published var arrayRecipe: [Recipe] = []
+    let db = Firestore.firestore().collection("recipes")
+    
+    func getData() async {
+        do {
+            let data = try await db.getDocuments(as: Recipe.self)
+            self.arrayRecipe = data
+            
+            
+        } catch {
+            print("error")
+        }
+        
+    }
+}
+
+
+
 
 struct RecipeViewCell: View {
+    @StateObject var vm = RecipeViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.arrayRecipe) { item in
+                HStack {
+                    ImageLoaderView(imageName: item.image)
+                        .frame(width: 70, height: 70)
+                    Text(item.name)
+                }
+                
+            }
+        }
+        .task {
+            await vm.getData()
+        }
     }
 }
 
