@@ -103,3 +103,43 @@ extension AuthManager {
 //        try await user.updateEmail(to: email)
 //    }
 }
+//MARK: Анонимная авторизация
+extension AuthManager {
+    
+    
+    func signInAnon() async throws -> AuthDataResultModel {
+        let authDataResult = try await Auth.auth().signInAnonymously()
+        return AuthDataResultModel(user: authDataResult.user)
+    }
+    
+    
+    
+    private func linkCredential(credential: AuthCredential) async throws -> AuthDataResultModel {
+        guard let user = Auth.auth().currentUser else {
+            throw URLError(.badURL)
+        }
+    let authDataResult = try await user.link(with: credential)
+    return AuthDataResultModel(user: authDataResult.user)
+    }
+    func linkEmail(email: String, password: String) async throws -> AuthDataResultModel {
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        return try await linkCredential(credential: credential)
+//        guard let user = Auth.auth().currentUser else {
+//            throw URLError(.badURL)
+//        }
+//       let authDataResult = try await user.link(with: credential)
+//        return AuthDataResultModel(user: authDataResult.user)
+    }
+    //MARK: APPLE LINK
+//    func linkApple(tokens: SignInWithAppleResult) async throws -> AuthDataResultModel {
+//        let credential = OAuthProvider.appleCredential(withIDToken: tokens.token, rawNonce: tokens.nonce, fullName: tokens.fullName)
+//        return try await linkCredential(credential: credential)
+//
+//    }
+        //MARK: GOOGLE LINK
+//    func linkGoogle(tokens: GoogleSignInResultModel) async throws -> AuthDataResultModel {
+//        let credential = GoogleAuthProvider.credential(withIDToken: tokens.idToken, accessToken: tokens.accessToken)
+//        return try await linkCredential(credential: credential)
+//
+//    }
+}
