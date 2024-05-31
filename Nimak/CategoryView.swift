@@ -19,27 +19,7 @@ final class CategoryViewModel: ObservableObject {
             let data = try await db.getDocuments(as: CategoryMenu.self)
             
             
-//            mainCategoriesRef.getDocuments { (snapshot, error) in
-//                if let error = error {
-//                    print("Error fetching main categories: \(error)")
-//                } else if let snapshot = snapshot {
-//                    let mainCategories = snapshot.documents.compactMap { document in
-//                        try? document.data(as: MainCategory.self)
-//                    }
-//                    // Iterate over main categories and fetch subcategories
-//                    for mainCategory in mainCategories {
-//                        mainCategoriesRef.document(mainCategory.id).collection("subcategories").getDocuments { (snapshot, error) in
-//                            if let error = error {
-//                                print("Error fetching subcategories for main category \(mainCategory.id): \(error)")
-//                            } else if let snapshot = snapshot {
-//                                mainCategory.subcategories = snapshot.documents.compactMap { document in
-//                                    try? document.data(as: Subcategory.self)
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
+
 
             
             db.getDocuments { (snapshot, error) in

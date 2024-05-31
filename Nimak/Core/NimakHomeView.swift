@@ -10,8 +10,6 @@ import SwiftUI
 struct NimakHomeView: View {
     @State private var scrollViewOffset: CGFloat = 0
     @State private var address: String = "Аккумуляторная 1"
- 
-
     @StateObject var vm = ProductDownloadViewModel()
     
     var body: some View {

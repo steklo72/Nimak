@@ -36,7 +36,6 @@
 		1E129DF52BF6094900A075B0 /* Query + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129DF42BF6094900A075B0 /* Query + EXT.swift */; };
 		1E129DF72BFB3CDE00A075B0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129DF62BFB3CDE00A075B0 /* AsyncImageView.swift */; };
 		1E6C22362BFBD2CC00D68DA2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C22352BFBD2CC00D68DA2 /* CategoryView.swift */; };
-		1E6C22382BFC9CD900D68DA2 /* CategoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C22372BFC9CD900D68DA2 /* CategoryTest.swift */; };
 		1E6C223A2BFCE9E200D68DA2 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C22392BFCE9E200D68DA2 /* TEST.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		1E129DF42BF6094900A075B0 /* Query + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query + EXT.swift"; sourceTree = "<group>"; };
 		1E129DF62BFB3CDE00A075B0 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		1E6C22352BFBD2CC00D68DA2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		1E6C22372BFC9CD900D68DA2 /* CategoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTest.swift; sourceTree = "<group>"; };
 		1E6C22392BFCE9E200D68DA2 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,12 +106,10 @@
 			children = (
 				1E129DB02BEE268400A075B0 /* NimakApp.swift */,
 				1E129DB22BEE268400A075B0 /* ContentView.swift */,
-				1E129DBE2BEE26A000A075B0 /* NimakHomeView.swift */,
 				1E129DE32BF2676B00A075B0 /* ProfileView.swift */,
 				1E129DF22BF5EA6500A075B0 /* RecipeViewCell.swift */,
 				1E129DF42BF6094900A075B0 /* Query + EXT.swift */,
 				1E6C22352BFBD2CC00D68DA2 /* CategoryView.swift */,
-				1E6C22372BFC9CD900D68DA2 /* CategoryTest.swift */,
 				1E6C22392BFCE9E200D68DA2 /* TEST.swift */,
 				1E129DDB2BEE302900A075B0 /* ProductsDatabase.swift */,
 				1E129DE12BEE652400A075B0 /* DownloadManagerProduct.swift */,
@@ -157,6 +153,7 @@
 		1E129DD62BEE2CEB00A075B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1E129DBE2BEE26A000A075B0 /* NimakHomeView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				1E129DED2BF2819200A075B0 /* ImageLoaderView.swift in Sources */,
 				1E129DF32BF5EA6500A075B0 /* RecipeViewCell.swift in Sources */,
 				1E129DF12BF2839D00A075B0 /* DatabaseHelper.swift in Sources */,
-				1E6C22382BFC9CD900D68DA2 /* CategoryTest.swift in Sources */,
 				1E129DEF2BF281D100A075B0 /* Constants.swift in Sources */,
 				1E129DF72BFB3CDE00A075B0 /* AsyncImageView.swift in Sources */,
 				1E129DE42BF2676B00A075B0 /* ProfileView.swift in Sources */,
