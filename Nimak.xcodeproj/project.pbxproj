@@ -37,6 +37,7 @@
 		1E129DF72BFB3CDE00A075B0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129DF62BFB3CDE00A075B0 /* AsyncImageView.swift */; };
 		1E6C22362BFBD2CC00D68DA2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C22352BFBD2CC00D68DA2 /* CategoryView.swift */; };
 		1E6C223A2BFCE9E200D68DA2 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C22392BFCE9E200D68DA2 /* TEST.swift */; };
+		1EF7E6CB2C09B0AA00A6B8AB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7E6CA2C09B0A900A6B8AB /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		1E129DF62BFB3CDE00A075B0 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		1E6C22352BFBD2CC00D68DA2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		1E6C22392BFCE9E200D68DA2 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
+		1EF7E6CA2C09B0A900A6B8AB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		1E129DAF2BEE268400A075B0 /* Nimak */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7E6C92C09B09500A6B8AB /* Auth */,
 				1E129DB02BEE268400A075B0 /* NimakApp.swift */,
 				1E129DB22BEE268400A075B0 /* ContentView.swift */,
 				1E129DE32BF2676B00A075B0 /* ProfileView.swift */,
@@ -167,6 +170,14 @@
 				1E129DF02BF2839D00A075B0 /* DatabaseHelper.swift */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		1EF7E6C92C09B09500A6B8AB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7E6CA2C09B0A900A6B8AB /* AuthManager.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 				1E129DB32BEE268400A075B0 /* ContentView.swift in Sources */,
 				1E129DDE2BEE318600A075B0 /* SliderOnTheHomeViewModel.swift in Sources */,
 				1E6C22362BFBD2CC00D68DA2 /* CategoryView.swift in Sources */,
+				1EF7E6CB2C09B0AA00A6B8AB /* AuthManager.swift in Sources */,
 				1E129DB12BEE268400A075B0 /* NimakApp.swift in Sources */,
 				1E129DED2BF2819200A075B0 /* ImageLoaderView.swift in Sources */,
 				1E129DF32BF5EA6500A075B0 /* RecipeViewCell.swift in Sources */,

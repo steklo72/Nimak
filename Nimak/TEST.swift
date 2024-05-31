@@ -11,18 +11,13 @@ import FirebaseFirestore
 final class TestViewModel: ObservableObject {
     @Published var categoryArray: [Category] = []
     
+    
+    
 }
 
 struct CategoryListView: View {
     @State var categories: [Category] = []
     @StateObject var vm = TestViewModel()
-    
-//    var body: some View {
-//        List(vm.categoryArray) { category in
-//            
-//            
-//        }
-//    }
     
     var body: some View {
         NavigationStack {
@@ -58,17 +53,21 @@ struct SubcategoryListView: View {
     @State var podcategory: [Subcategory] = []
 
     var body: some View {
-        List {
-            Text("Subcategories for \(categoryId)")
-            // Fetch subcategories for the given categoryId
-            ForEach(podcategory) { item in
-                Text(item.name)
+        NavigationStack {
+            List {
+                Text("Subcategories for \(categoryId)")
+                // Fetch subcategories for the given categoryId
+                ForEach(podcategory) { item in
+                    Text(item.name)
+                    
+                }
                 
-            }
-            
-        }.onAppear {
-            loadSubcategories()
+                
+            }.onAppear {
+                loadSubcategories()
         }
+        }
+        
     }
 
     func loadSubcategories() {
