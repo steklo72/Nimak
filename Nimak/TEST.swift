@@ -55,7 +55,7 @@ struct SubcategoryListView: View {
     var body: some View {
         NavigationStack {
             List {
-                Text("Subcategories for \(categoryId)")
+//                Text("Subcategories for \(categoryId)")
                 // Fetch subcategories for the given categoryId
                 ForEach(podcategory) { item in
                     Text(item.name)
@@ -63,7 +63,9 @@ struct SubcategoryListView: View {
                 }
                 
                 
-            }.onAppear {
+                
+            }/*.toolbar(.hidden, for: .navigationBar)*/
+            .onAppear {
                 loadSubcategories()
         }
         }
