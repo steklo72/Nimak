@@ -26,7 +26,7 @@ final class CategoryViewModel: ObservableObject {
                 if let error = error {
                     print("Error fetching main categories: \(error)")
                 } else if let snapshot = snapshot {
-                    var mainCategories = snapshot.documents.compactMap { document in
+                    let mainCategories = snapshot.documents.compactMap { document in
                         try? document.data(as: CategoryMenu.self)
                     }
                     // Iterate over main categories and fetch subcategories

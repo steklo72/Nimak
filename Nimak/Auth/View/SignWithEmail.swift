@@ -64,15 +64,17 @@ struct SignWithEmail: View {
                     }
                     .frame(maxWidth: .infinity)
                     Button {
-                        
+                       
                     } label: {
                         Text("Регистрация")
                             .fontWeight(.bold)
                     }.frame(maxWidth: .infinity)
 
                 }
+                .background(.red)
                 .padding(30)
                 .foregroundStyle(.white)
+                
 
             }
         }
